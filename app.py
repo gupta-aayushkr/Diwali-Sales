@@ -33,7 +33,7 @@ def save_seaborn_plot_as_image(figure, digipodium):
 # Countplot for Gender
 st.subheader('Gender Distribution')
 gender_countplot = sb.countplot(x='Gender', data=df)
-# save_plot_as_image(gender_countplot.get_figure(), 'gender_distribution.png')
+save_plot_as_image(gender_countplot.get_figure(), 'gender_distribution.png')
 st.write('### Gender Distribution:')
 st.write(' Female Dominance: The data indicates a higher representation of female buyers compared to males. :')
 st.write(' This suggests a significant female presence in the customer base during the Diwali sales period.')
@@ -42,7 +42,7 @@ st.write('---')
 # Countplot for Age Group
 st.subheader('Age Group Distribution')
 age_group_countplot = sb.countplot(data=df, x='Age Group', hue='Gender')
-# save_plot_as_image(age_group_countplot.get_figure(), 'age_group_distribution.png')
+save_plot_as_image(age_group_countplot.get_figure(), 'age_group_distribution.png')
 
 # Age Group Distribution Conclusion
 st.write('### Age Group Distribution:')
@@ -69,12 +69,12 @@ st.write('---')
 
 st.subheader('Marital Status Distribution')
 marital_status_countplot = sb.countplot(data=df, x='Marital_Status')
-# save_seaborn_plot_as_image(marital_status_countplot.get_figure(), 'marital_status_distribution.png')
+save_seaborn_plot_as_image(marital_status_countplot.get_figure(), 'marital_status_distribution.png')
 
 # Marital Status Distribution
 st.subheader('Marital Status Distribution')
 marital_status_countplot = sb.countplot(data=df, x='Marital_Status')
-# save_seaborn_plot_as_image(marital_status_countplot.get_figure(), 'marital_status_distribution.png')
+save_seaborn_plot_as_image(marital_status_countplot.get_figure(), 'marital_status_distribution.png')
 
 # Marital Status vs. Amount with Gender hue
 st.subheader('Marital Status vs. Amount with Gender Hue')
@@ -90,7 +90,7 @@ st.write('---')
 st.subheader('Occupation Distribution')
 plt.figure(figsize=(19, 5))
 occupation_countplot = sb.countplot(data=df, x='Occupation')
-# save_seaborn_plot_as_image(occupation_countplot.get_figure(), 'occupation_distribution.png')
+save_seaborn_plot_as_image(occupation_countplot.get_figure(), 'occupation_distribution.png')
 
 # Occupation Distribution Conclusion
 st.write('### Occupation Distribution:')
